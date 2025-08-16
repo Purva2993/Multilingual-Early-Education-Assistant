@@ -1,0 +1,172 @@
+government_sources:
+  - name: "UNESCO"
+    base_url: "https://www.unesco.org"
+    pages:
+      - "/en/early-childhood-education"
+      - "/en/education/early-childhood"
+      - "/en/education/education-2030-agenda"
+    language: "en"
+    priority: "high"
+    crawl_depth: 2
+    
+  - name: "US Department of Education"
+    base_url: "https://www.ed.gov"
+    pages:
+      - "/early-learning"
+      - "/about/offices/list/oese/pi/earlylearning"
+      - "/policy/elsec/leg/essa/earlylearning.html"
+    language: "en"
+    priority: "high"
+    crawl_depth: 2
+    
+  - name: "UK Department for Education"
+    base_url: "https://www.gov.uk"
+    pages:
+      - "/government/organisations/department-for-education"
+      - "/early-years-foundation-stage"
+    language: "en"
+    priority: "high"
+    crawl_depth: 1
+    
+  - name: "Australian Department of Education"
+    base_url: "https://www.education.gov.au"
+    pages:
+      - "/early-childhood"
+      - "/early-years-learning-framework"
+    language: "en"
+    priority: "high"
+    crawl_depth: 1
+
+ngo_sources:
+  - name: "Zero to Three"
+    base_url: "https://www.zerotothree.org"
+    pages:
+      - "/resources/series/little-kids-big-feelings"
+      - "/early-development"
+      - "/resources/topics"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 2
+    
+  - name: "National Association for the Education of Young Children"
+    base_url: "https://www.naeyc.org"
+    pages:
+      - "/resources/topics"
+      - "/our-work/families"
+      - "/accreditation-and-assessment"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 2
+    
+  - name: "Bright Horizons"
+    base_url: "https://www.brighthorizons.com"
+    pages:
+      - "/family-resources"
+      - "/early-education"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 1
+    
+  - name: "Head Start"
+    base_url: "https://www.acf.hhs.gov"
+    pages:
+      - "/ohs"
+      - "/ohs/about"
+    language: "en"
+    priority: "high"
+    crawl_depth: 1
+
+academic_sources:
+  - name: "Harvard Center on the Developing Child"
+    base_url: "https://developingchild.harvard.edu"
+    pages:
+      - "/resources"
+      - "/science/key-concepts"
+    language: "en"
+    priority: "high"
+    crawl_depth: 2
+    
+  - name: "Stanford Medicine Children's Health"
+    base_url: "https://www.stanfordchildrens.org"
+    pages:
+      - "/en/topic/default?id=overview-of-child-development-90-P02689"
+      - "/en/topic/default?id=developmental-milestones-90-P02688"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 1
+
+research_sources:
+  - name: "Child Development Perspectives"
+    base_url: "https://srcd.onlinelibrary.wiley.com"
+    pages:
+      - "/journal/17508606"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 1
+    
+  - name: "Early Childhood Research Quarterly"
+    base_url: "https://www.sciencedirect.com"
+    pages:
+      - "/journal/early-childhood-research-quarterly"
+    language: "en"
+    priority: "medium"
+    crawl_depth: 1
+
+international_sources:
+  - name: "UNICEF"
+    base_url: "https://www.unicef.org"
+    pages:
+      - "/early-childhood-development"
+      - "/parenting"
+    language: "en"
+    priority: "high"
+    crawl_depth: 2
+    
+  - name: "World Health Organization"
+    base_url: "https://www.who.int"
+    pages:
+      - "/news-room/fact-sheets/detail/child-development"
+      - "/health-topics/child-health"
+    language: "en"
+    priority: "high"
+    crawl_depth: 1
+
+# Crawling configuration
+crawling_config:
+  respect_robots_txt: true
+  delay_between_requests: 1.0
+  max_concurrent_requests: 3
+  timeout: 30
+  retry_attempts: 3
+  
+  # Content filters
+  min_content_length: 100
+  max_content_length: 10000
+  
+  # File types to include
+  allowed_extensions:
+    - .html
+    - .htm
+    - .pdf
+    - .txt
+    
+  # Content types to exclude
+  excluded_content_types:
+    - "image/"
+    - "video/"
+    - "audio/"
+    - "application/javascript"
+    - "text/css"
+    
+  # Patterns to exclude from crawling
+  exclude_patterns:
+    - "/admin"
+    - "/login"
+    - "/search"
+    - "/contact"
+    - "/cookie"
+    - "/privacy"
+    - "/terms"
+    - "/.git"
+    - "/wp-admin"
+    - "/wp-content/uploads"
