@@ -355,10 +355,6 @@ Content-Type: application/json
    EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L12-v2
    ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [Ollama](https://ollama.ai/) for local LLM hosting
@@ -367,9 +363,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Streamlit](https://streamlit.io/) for the frontend
 - Educational institutions providing open access to knowledge
 
-## 📞 Support
-
-For support, email support@example.com or join our [Discord community](https://discord.gg/example).
 
 ## 🗺️ Roadmap
 
@@ -380,6 +373,3 @@ For support, email support@example.com or join our [Discord community](https://d
 - [ ] Multilingual model fine-tuning
 - [ ] Enterprise features (SSO, analytics)
 
----
-
-**Made with ❤️ for educators and parents worldwide**
